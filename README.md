@@ -3,6 +3,10 @@
 
 Para capturar la señal cardíaca de manera efectiva, se utilizan electrodos adhesivos conectados a un sistema de adquisición de datos basado en Arduino, el cual es programado en Python para realizar tanto la adquisición como el procesamiento de las señales. La implementación de este sistema requiere la verificación cuidadosa de los voltajes y corrientes de trabajo para garantizar la compatibilidad con el sistema operativo y evitar daños en los componentes electrónicos o en el usuario. Este laboratorio, por tanto, se centra en desarrollar un sistema de adquisición y análisis de HRV empleando técnicas avanzadas como la Transformada Wavelet y evaluando la dinámica del ritmo cardíaco a través de un entorno de programación accesible y compatible para investigaciones futuras en el área biomédica.
 
+![image](https://github.com/user-attachments/assets/1c86eabc-bfac-4a6c-ae45-cf6b3db64fa1)
+
+<em><strong>Figura 1.</strong> Posicionamiento de electrodos para ECG.</em>
+
 Sin embargo, para dicha adquisisción de las señales en distintos sujetos de prueba se efectuo un consentimiento informado que se encuentra agregado en la presente plataforma. Esto para poder hacer uso de los datos recolectados y realizar su respectivo analisis. Así mismo, hay ciertos conceptos teoricos que es de suma importancia comprender antes de empezar con la obtención de las señales.
 
 ### Actividad simpática y parasimpática del sistema nervioso autónomo
@@ -23,7 +27,7 @@ La Variabilidad de la Frecuencia Cardíaca (HRV) se define como la variación en
 
 ![image](https://github.com/user-attachments/assets/5f6a7c36-4eb0-4d22-a6eb-aacebb9c0748)
 
-<em><strong>Figura 1.</strong> Visualización de señales ECG.</em>
+<em><strong>Figura 2.</strong> Visualización de señales ECG.</em>
 
 El análisis de HRV se enfoca en frecuencias de interés que reflejan diferentes aspectos de la actividad simpática y parasimpática. Las principales bandas de frecuencia en el análisis de HRV son:
 - **Frecuencia ultra baja (ULF, <0.003 Hz):** Asociada con ritmos circadianos y cambios hormonales.
