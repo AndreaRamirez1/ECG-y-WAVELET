@@ -59,4 +59,5 @@ En el desarrollo se considero un orden de ejecución para la adquisisción de se
 # Resultados
 
 # Conclusiones
-Variabilidad de la Frecuencia Cardiaca usando la Transformada Wavelet 
+
+La Variabilidad de la Frecuencia Cardíaca (HRV) es un indicador esencial del estado y la regulación del sistema nervioso autónomo, proporcionando una ventana directa a la interacción entre el sistema simpático y parasimpático sobre el corazón. La necesidad de analizar esta señal, que es dinámica y no estacionaria, hace que la Transformada Wavelet sea una herramienta valiosa, ya que permite descomponer la señal en sus componentes de frecuencia y temporalidad, ofreciendo una representación precisa de las fluctuaciones instantáneas en el ritmo cardíaco. Mediante el uso de electrodos adhesivos, un sistema de adquisición basado en Arduino y un entorno de programación en Python, es posible implementar una plataforma robusta para la captura y análisis de señales de HRV. La verificación de la compatibilidad de voltajes y corrientes asegura la funcionalidad y seguridad del sistema, haciendo que este enfoque sea no solo práctico, sino también seguro para estudios biomédicos. Este proyecto tiene el potencial de sentar una base sólida para investigaciones futuras, ofreciendo un sistema accesible y adaptable para el análisis avanzado de HRV en entornos de laboratorio o clínicos.
