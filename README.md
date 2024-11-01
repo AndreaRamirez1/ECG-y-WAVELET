@@ -61,6 +61,69 @@ En el desarrollo se considero un orden de ejecución para la adquisisción de se
 
 # Resultados
 
+De manera análoga se hizo un circuito donde se usaron filtros análogos y se uso un optoacoplador para aislar al paciente de las posibles descargas que se podían generar en el momento de la obtención de la señal, para la parte analógica usamos los siguientes materiales y recursos para obtener una buena señal y así pasarla a un filtrado digital
+
+Materiales empelados
+Arduino uno (que nos va a permitir realizar la conexión entre el AD8232 y Python) 
+Modulo AD8232 (para la amplificación de la señal ECG)
+Amplificador operacional TL074 (Tiene 4 amplificadores integrados) 
+Optoacoplador 4N25 (Para el aislamiento del paciente) 
+Resistencias y capacitores para los filtros 
+Diodos de protección 
+Fuente de alimentación asilada 
+
+Para la parte análoga implementamos diferentes filtros para obtener una buena señal 
+Filtro pasa alto: 
+En el cual lo hicimos porque elimina el ruido a baja frecuencia y evita que la deriva DC en la señal, este lo conectamos a la salida del AD8232 con una de las entradas del amplificador 
+
+Filtro Notch para 60 Hz 
+Este lo usamos para suprimir la interferencia eléctrica que se pueda tener en el momento de la obtención de la señal 
+Filtro pasa-Bajo ( Para eliminar el aliasing) 
+Este lo hicimos ya que este filtro reduce los componentes de alta frecuencia en este caso seria el ruido muscular y previene el aliasing al digitalizar la señal 
+Aislamiento del paciente 
+Usamos el optoacoplador 4N25 con el fin de proteger al paciente de cualquier corriente peligrosa y esto se hace antes de pasar la señal al Arduino. 
+
+
+
+![image](https://github.com/user-attachments/assets/ebc5ebb6-93c9-44ed-86eb-5744628c3627)
+
+ 
+Montaje Análogo 
+
+![image](https://github.com/user-attachments/assets/6bea91f5-5096-4733-865d-37b62af73658)
+
+Montaje Análogo
+
+Ya que cuando terminamos la parte análoga se hizo la parte digital que fue un código en Python y una parte en Arduino uno la cual nos permite hacer la conexión entre el circuito análogo, que se conecta al AD8232 posteriormente al Arduino y este pasa la señal a Python. 
+Para esta parte en necesitamos un consentimiento informado para poder obtener la señal ECG del paciente, grabamos la señal por 5 min donde el sujeto debía estar en reposo y en algunos intervalos se le hablo para poder tomar las señales del sistema simpático y parasimpático, todo con el fin de reducir el ruido experimental, para así poder asegurar la frecuencia de muestreo y los niveles de cuantificación, aplicamos filtros digitales, en este caso aplicamos un filtro de promedio esto con el fin de eliminar el ruido que aparece en la señal, de igual forma se hizo el respectivo análisis de HRV en el dominio del tiempo, en este caso la media de los intervalos R-R y su desviación estándar, seguido a esto aplicamos una transformada Wavelet continua en este caso usamos la transformada morlet y comparamos la señal obtenida con la trasnformada de wavelet para ver su comportamiento. 
+
+ ![image](https://github.com/user-attachments/assets/dea2d2b5-8278-4d34-a12c-fddfa67d8001)
+
+Señal electrocardiograma
+
+ ![image](https://github.com/user-attachments/assets/624e4d2b-8201-4fa9-9977-237d4ef3c640)
+
+Detención de picos 
+
+ ![image](https://github.com/user-attachments/assets/762ce5ca-d3df-4a73-8baf-b64515181684)
+
+Comparación 
+
+ ![image](https://github.com/user-attachments/assets/60062af6-52c8-44f6-b56a-d17d4c6a3f89)
+
+Espectrograma wavelet 
+
+ ![image](https://github.com/user-attachments/assets/6bc0a631-fc41-44f2-9105-c75b665ba661)
+
+Distribución de la potencia
+
+![image](https://github.com/user-attachments/assets/42b3139e-837f-4ef8-8ced-70d8096d2527)
+
+Resultados 1 
+
+![image](https://github.com/user-attachments/assets/2d561ffc-18ff-4a47-abe6-1ddf30d20066)
+Resultados 2
+
 # Conclusiones
 
 La Variabilidad de la Frecuencia Cardíaca (HRV) es un indicador esencial del estado y la regulación del sistema nervioso autónomo, proporcionando una ventana directa a la interacción entre el sistema simpático y parasimpático sobre el corazón. La necesidad de analizar esta señal, que es dinámica y no estacionaria, hace que la Transformada Wavelet sea una herramienta valiosa, ya que permite descomponer la señal en sus componentes de frecuencia y temporalidad, ofreciendo una representación precisa de las fluctuaciones instantáneas en el ritmo cardíaco. Mediante el uso de electrodos adhesivos, un sistema de adquisición basado en Arduino y un entorno de programación en Python, es posible implementar una plataforma robusta para la captura y análisis de señales de HRV. La verificación de la compatibilidad de voltajes y corrientes asegura la funcionalidad y seguridad del sistema, haciendo que este enfoque sea no solo práctico, sino también seguro para estudios biomédicos. Este proyecto tiene el potencial de sentar una base sólida para investigaciones futuras, ofreciendo un sistema accesible y adaptable para el análisis avanzado de HRV en entornos de laboratorio o clínicos.
