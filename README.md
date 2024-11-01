@@ -55,6 +55,9 @@ La elección de la wavelet depende de la naturaleza de la señal y los objetivos
 
 En el desarrollo se considero un orden de ejecución para la adquisisción de señales adecuadas. Dicho orden consiste en un diagrama de flujo que nos permitira llevar el paso a paso de cada procedimiento a ejecutar para las señales.
 
+![image](https://github.com/user-attachments/assets/cbc4f337-2dae-4a70-945a-e2ced5c0c459)
+
+<em><strong>Figura 3.</strong> Diagrama de flujpo para procesamiento de señales ECG.</em>
 
 # Resultados
 
